@@ -1,0 +1,422 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+$primary: rgb(135, 20, 0);
+$background: rgb(248, 239, 219);
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $background;
+    height: 100vh;
+    width: 99vw;
+}
+
+//  Nav
+
+.nav-container {
+    position: fixed;
+    box-shadow:0 0 10px rgba(37, 37, 37, 0.139);
+    width: 100%;
+    display: block;
+    z-index: 99;
+    background-color: $background;
+}
+
+.nav-container {
+    h1 {
+        font-family : sans-serif;
+        color: $primary;
+        margin-left: 20px;
+    }
+}
+
+.first-menu {
+    display: flex;
+}
+
+.search {
+    height: 1em;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    position: relative;
+    bottom: 5px;
+    left: 10px;
+
+}
+
+.search::placeholder{
+    font-family: sans-serif;
+}
+
+.search[type="text"]{
+    color: rgb(37, 37, 37);
+    font-family: sans-serif;
+}
+
+nav {
+    display: none;
+}
+
+.first-menu {
+    a {
+        display: none;
+    }
+}
+
+.burger {
+    position: absolute;
+    left: 85%;
+    bottom: 40%;
+    background-color: $primary;
+    zoom: 170%;
+    padding-top: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.burger {
+    img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }
+}
+
+.kvadratas {
+    height: 1.3em;
+    width: 1.3em;
+    background-color: $primary;
+    position: relative;
+    bottom: 6px;
+    left: 10px;
+}
+
+.kvadratas::after {
+    content: url("../img/search.svg");
+    padding-top: 2px;
+    padding-left: 2px;
+    position: absolute;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+
+}
+
+//  Content
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-style {
+    color: $primary;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    p {
+        background-color: $primary;
+        color: $background;
+        box-shadow: 10px 10px 0 #f5730a;
+        width: 60%;
+        padding: 50px;
+        margin-left: 20px;
+        line-height: 40px;
+    }
+}
+
+.hero {
+    h3 {
+        position: relative;
+        right: 15%;
+    }
+}
+
+//  Testimonials
+
+.testimonials {
+    position: relative;
+    top: 200px;
+}
+
+.quotes {
+    display: flex;
+    flex-direction: column;
+}
+
+.qt1::after {
+    content: 'John Doe';
+    position: relative;
+    left: 60%;
+    bottom: 50px;
+    font-size: 13px;
+}
+
+.qt2::after {
+    content: 'Jane Doe';
+    position: relative;
+    left: 60%;
+    bottom: 50px;
+    font-size: 13px;
+}
+
+.qt3::after {
+    content: 'John Smith';
+    position: relative;
+    left: 60%;
+    bottom: 50px;
+    font-size: 13px;
+}
+
+.qt1, .qt2, .qt3 {
+    color: $background;
+    font-family: sans-serif;
+    margin: 30px;
+    padding: 15px;
+    background-color: $primary;
+    box-shadow: 10px 10px 0 #f5730a;
+}
+
+.qt1:hover, .qt2:hover, .qt3:hover {
+    transform: scale(1.05);
+    transition: transform 500ms ease;
+}
+
+.quoteImage {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    left: 70%;
+    top: 45px;
+    border: 5px solid $primary;
+}
+
+
+// .qt1::before {
+//     content: '';
+//     background-color: #f5730a;
+//     height: 52%;
+//     width: 27%;
+//     position: absolute;
+//     z-index: -1;
+// }
+
+// .qt2::before {
+//     content: '';
+//     background-color: #f5730a;
+//     height: 52%;
+//     width: 28%;
+//     position: absolute;
+//     z-index: -1;
+// }
+
+
+// .qt3::before {
+//     content: '';
+//     background-color: #f5730a;
+//     height: 52%;
+//     width: 32%;
+//     position: absolute;
+//     z-index: -1;
+// }
+
+.qt3 {
+    display: none;
+}
+
+.desktop-divider {
+   display: none;
+}
+
+//  Footer
+
+footer{
+    background-color: $primary;
+    height: 100px;
+}
+
+.footer {
+    display: flex;
+    flex-flow: column;
+}
+
+.footer {
+    p {
+        margin: 0;
+        font-family: sans-serif;
+        color: $background;
+        font-size: 13px;
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+.footer {
+    a {
+        font-family: sans-serif;
+        text-decoration: none;
+        color: $background;
+        padding: 5px 50px;;
+        font-size: 13px;
+
+    }
+}
+
+.graphic {
+    width: 50px;
+    height: 300px;
+    background-color: $primary;
+    transform: rotateZ(47deg);
+    position: relative;
+    left: 50%;
+    box-shadow: 20px 10px 0 #f5730a;
+}
+
+.hero {
+    img {
+        display: none;
+    }
+}
+
+@media(min-width: 768px){
+    nav{
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 70%;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+            color:$primary;
+            font-family: sans-serif;
+            position: relative;
+            margin-left: 30px;
+        }
+    }
+
+    .first-menu {
+        a {
+            text-decoration: none;
+            display: block;
+            color:$primary;
+            font-family: sans-serif;
+            position: absolute;
+            left: 80%;
+            top: 70%;
+        }
+    }
+
+    .first-menu a::after{
+        content: url("../img/caret-down-fill.svg");
+        filter: invert(10%) sepia(95%) saturate(3343%) hue-rotate(8deg) brightness(96%) contrast(104%);
+        position: absolute;
+        top: 15%;
+        zoom: 90%;
+    }
+
+    .search{
+        width: 40%;
+        position: relative;
+        left: 50%;
+        z-index: 10;
+        bottom: 50px;
+    }
+
+    .kvadratas{
+        top: 18px;
+        position: absolute;
+        left: 90%;
+        top: 29px;
+        z-index: 11;
+    }
+
+    nav {
+        a:hover::after {
+            content: '';
+            background-color: $primary;
+            width: 100%;
+            height: 10%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0.5;
+
+        }
+    }
+
+    .quotes {
+        flex-direction: row;
+    }
+
+    .qt1::after {
+        left: 30%;
+    }
+
+    .qt2::after {
+        left: 30%;
+    }
+
+    .qt3::after {
+        left: 30%;
+    }
+
+    .graphic {
+        position: relative;
+        left: 75%;
+        bottom: 70px;
+    }
+
+    .testimonials {
+        top: 1px;
+    }
+
+    .hero {
+        img {
+            display: unset;
+            filter: invert(10%) sepia(95%) saturate(3343%) hue-rotate(8deg) brightness(96%) contrast(104%);
+            width: 400px;
+            position: relative;
+            bottom: 200px;
+            left: 10%;
+        }
+    }
+
+}
+
+
+@media(min-width: 912px){
+    .desktop-divider {
+        display: unset;
+    }
+
+    .mobile-divider {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .qt3 {
+        display: unset;
+    }
+
+    
+}

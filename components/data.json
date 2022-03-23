@@ -1,0 +1,28 @@
+{
+  "reviews": [
+    {
+      "id": 0,
+      "clientName": "John Smith",
+      "reviewText": "Great services! The delivery was fast and the customer support was very professional.",
+      "reviewRating": 5
+    },
+    {
+      "id": 1,
+      "clientName": "Jane Doe",
+      "reviewText": "Outstanding experience! Everything went smoothly.",
+      "reviewRating": 5
+    },
+    {
+      "id": 2,
+      "clientName": "John Doe",
+      "reviewText": "The service was extraordinary, definitely going to buy from this site again!",
+      "reviewRating": 5
+    },
+    {
+      "clientName": "John Doe",
+      "reviewText": "sfsdf",
+      "rewievRating": 5,
+      "id": 3
+    }
+  ]
+}
